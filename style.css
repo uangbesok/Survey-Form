@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    background: white; 
+    font-family: 'Roboto Condensed', sans-serif; 
+}
+
+section, main
+{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60vw;
+    padding: 1rem;
+}
+
+.align--center { text-align: center; }
+
+.align--self--start {
+  align-self: start;
+}
+
+.surveySection
+{
+    background: rgb(125, 162, 231);
+}
+
+.surveyForm{
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 1rem 2fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 0.3rem 0.6rem;
+    /* grid-auto-flow: dense; */
+    align-items: center;
+  }
+
+  .surveySection > p
+  {
+    font-size: 1.3rem;
+    margin: 0.5rem 0.5rem;
+    padding: 1rem 1rem;
+  }
+  
+  .surveyForm > input, output, textarea, select, button {
+    grid-column: 3 / 5;
+    width: auto;
+    margin: 0;
+  }
+  
+  .surveyForm >input[type="checkbox"], 
+  .surveyForm >input[type="radio"] {
+    grid-column: 3 / 4;
+    justify-self: start;
+    margin: 0;
+  }
+
+  .surveyForm > ul > li > input[type="checkbox"], 
+  .surveyForm > ul > li > input[type="radio"] {
+    grid-column: 3 / 4;
+    justify-self: start;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .surveyForm > label {
+    grid-column: 2 / 3;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    justify-self: end;
+    text-align: end;
+  }
+
+  .surveyForm >input[type="checkbox"] + label, 
+  .surveyForm >input[type="radio"] + label {
+    grid-column: 4 / 5;
+    justify-self: start;
+    text-align: start;
+  }
+
+  .surveyForm > ul {
+    grid-column: 3 / 5;
+    justify-self: start;
+    margin: 0;
+  }
+
+  .surveyForm > ul > li
+  {
+    margin: 0.3rem 0;
+  }
+
+  .surveyForm > ul > li > input[type="checkbox"] + label,
+  .surveyForm > ul > li > input[type="radio"] + label
+  {
+    margin-left: 0.9rem;
+  }
+
+  .surveyForm > .checkbox
+  {
+     list-style: none;
+     /* grid-column: 3 / 4; */
+     /* justify-self: start; */
+     width: auto;
+     padding: 0;
+     margin: 0;
+  } 
+
+  .surveyForm > button {
+    margin : 1rem;
+    padding: 0.25rem;
+  } 
+
+
+  @media (max-width: 700px) {
+  
+    .surveyForm > input, output, textarea, select, button  {
+      grid-column: 1 / span 6;
+    }
+
+    .surveyForm > label {
+      grid-column: 1 / span 6;
+      width: auto;
+      padding: 0;
+      margin: 0;
+      justify-self: start;
+      text-align: start;
+    }
+    
+  }
+
+

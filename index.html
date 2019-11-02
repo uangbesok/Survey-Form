@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="container align--center">
+        <h1 id="title">Survey form</h1>
+    </header>
+    <main>
+        <section class="container surveySection">
+            <p id="description" class="align--center">Let us know how we can improve freeCodeCamp</p>
+            <form id="survey-form" class="surveyForm">
+                    <label for="name" id="name-label">* Name: </label>
+                    <input id="name" name="name" type="text" placeholder="Enter your name" required/>
+
+                    <label for="email" id="email-label">* Email: </label>
+                    <input id="email" name="email" type="email" placeholder="Enter your email" required/>
+
+                    <label for="number" id="number-label">* Age: </label>
+                    <input id="number" name="number" type="number" min="6" max="150" placeholder="Enter your age" required/>
+
+                    <label for="userRating" class="align--self--start">* How likely is that you would recommend freeCodeCamp to a friend? </label>
+
+                    <ul class="checkbox" id="userRating">
+                        <li><input type="radio" id="ur1" name="userRating" value="definitely" /><label for="ur1">Definitely</label></li>
+                        <li><input type="radio" id="ur2" name="userRating" value="maybe" /><label for="ur2">Maybe</label></li>
+                        <li><input type="radio" id="ur3" name="userRating" value="not sure" /><label for="ur3">Not sure</label></li>
+                    </ul>
+                    
+                    <label for="dropdown">Which option best describes your current role? </label>
+                    <select id="dropdown" name="dropdown">
+                      <option disabled value >Please chose an option</option>  
+                      <option value="1">Student</option>
+                      <option value="2">Full time job</option>
+                      <option value="3">Part time job</option>
+                      <option value="5">Full time learner</option>
+                    </select>
+                    
+                    
+                    <!-- <input id="html" name="html" type="checkbox" />
+                    <label for="html">HTML</label>
+                    <input id="css" name="css" type="checkbox" />
+                    <label for="css">CSS</label>
+                    <input id="javascript" name="javascript" type="checkbox" />
+                    <label for="javascript">JavaScript</label> -->
+                    
+                   
+
+                    <label for="techList" class="align--self--start">Things that should be improved: </label>
+
+                    <ul class="checkbox" id="techList">
+                        <li><input type="checkbox" id="cb1" value="pepperoni" /><label for="cb1">Pepperoni</label></li>
+                        <li><input type="checkbox" id="cb2" value="sausage" /><label for="cb2">Sausage</label></li>
+                        <li><input type="checkbox" id="cb3" value="mushrooms" /><label for="cb3">Mushrooms</label></li>
+                        <li><input type="checkbox" id="cb4" value="onions" /><label for="cb4">Onions</label></li>
+                        <li><input type="checkbox" id="cb5" value="gpeppers" /><label for="cb5">Green Peppers</label></li>
+                        <li><input type="checkbox" id="cb6" value="xcheese" /><label for="cb6>">Extra Cheese</label></li>
+                    </ul>
+             
+                    <label for="comments" class="align--self--start">Additional comments: </label>
+                    <textarea id="comments" name="skills" rows="5" cols="20"></textarea>
+                    
+                    <button id="submit" type="submit">SUBMIT</button> 
+                
+              
+              
+            </form>
+        </section>
+     </main>
+</body>
+</html>
